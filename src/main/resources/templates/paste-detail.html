@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>PasteBin Detail</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>PasteBin Detail</h1>
+            <p th:text="${paste.content}"></p>
+            <a href="/pastes" class="back-link">Back to list</a>
+        </div>
+    </body>
+</html>

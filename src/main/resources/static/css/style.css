@@ -1,0 +1,98 @@
+/* Reset */
+body, h1, form, ul, li, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #7072ba;
+}
+
+/* Container for Content */
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    background-color: #43bce0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Heading Styling */
+h1 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 95%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #4994ab;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex:
+    flex-direction: column;
+    justify-content: center:
+    /*text-align: center;  Ensures list items align to the left within the container */
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #0000EE;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Paragraph Styling */
+p {
+    margin-bottom: 20px;
+}
+
+/* Back Link Styling */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #0000EE;
+}

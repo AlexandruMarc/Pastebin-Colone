@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>PasteBin Clone</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+    <body>
+        <div class="container">
+            <h1>PasteBin Clone</h1>
+            <form action="/pastes" method="post">
+                <textarea name="content"></textarea>
+                <br>
+                <button type="submit">Add Paste</button>
+            </form>
+            <ul>
+                <li th:each="paste : ${pastes}">
+                    <a th:href="@{/pastes/{id}(id=${paste.id})}" th:text="${#strings.abbreviate(paste.content, 21)}">Paste Content</a>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
