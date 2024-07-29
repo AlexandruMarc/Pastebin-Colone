@@ -17,18 +17,18 @@ public class PasteController {
 
     // Mapping to GET /pastes to retrieve and display all pastes
     @GetMapping
-    public String getAllPastes(Model model) {
+    public String getAll(Model model) {
         // Fetching all pastes from the service
-        List<Paste> pastes = pasteService.getAllPastes();
+        List<Paste> pastes = pasteService.getAll();
         model.addAttribute("pastes", pastes);
         return "paste-list";
     }
 
     // Mapping to GET /pastes/{id} to retrieve and display a paste by its ID
     @GetMapping("/{id}")
-    public String getPasteById(@PathVariable Long id, Model model) {
+    public String getById(@PathVariable Long id, Model model) {
         // Fetching the paste by its ID, throwing an exception if not found
-        Paste paste = pasteService.getPasteById(id).orElseThrow(() -> new IllegalArgumentException("Invalid paste Id:" + id));
+        Paste paste = pasteService.getById(id).orElseThrow(() -> new IllegalArgumentException("Invalid paste Id:" + id));
         model.addAttribute("paste", paste);
         return "paste-detail";
     }

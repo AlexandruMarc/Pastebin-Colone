@@ -17,10 +17,9 @@ public class PasteService {
      * Saves a Paste to the database.
      *
      * @param paste The Paste entity to save.
-     * @return The saved Paste entity.
      */
-    public Paste savePaste(Paste paste) {
-        return pasteRepository.save(paste);
+    public void savePaste(Paste paste) {
+        pasteRepository.save(paste);
     }
 
     /**
@@ -28,7 +27,7 @@ public class PasteService {
      *
      * @return List of all Paste entities.
      */
-    public List<Paste> getAllPastes() {
+    public List<Paste> getAll() {
         return pasteRepository.findAll();
     }
 
@@ -38,7 +37,7 @@ public class PasteService {
      * @param id The ID of the Paste to retrieve.
      * @return Optional containing the Paste if found.
      */
-    public Optional<Paste> getPasteById(Long id) {
+    public Optional<Paste> getById(Long id) {
         return pasteRepository.findById(id);
     }
 }
